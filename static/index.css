@@ -1,0 +1,257 @@
+/*----------GLOBAL CSS----------*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Eczar&display=swap');
+/*
+font-family: 'Arvo', serif;
+font-family: 'Eczar', serif;
+*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    background-color: var(--black-color);
+    line-height: 1.6;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+
+
+
+/*----------PSUDO CLASSES----------*/
+
+
+
+:root {
+    --primary-bg-color: rgba(58, 58, 58, 1);
+    --primary-bg-color-hover: rgb(26, 26, 26);
+    --secondary-bg-color: rgb(48, 48, 48);
+    
+    --primary-color: ;
+    --secondary-color: ;
+
+    --dark-text-color: #333;
+    --grey-text-color: rgb(118, 133, 165);
+
+    --white-color: rgb(255, 255, 255);
+    --black-color: #000;
+    --yellow-color: rgba(254, 231, 21, 1);
+    --yellow-color-hover: rgba(255, 238, 81, 0.9);
+}
+
+
+
+/*----------UTILITY CLASSES----------*/
+
+
+
+.container{
+    max-width: 1280px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin:0 auto;
+}
+
+
+
+/*----------ID'S CLASSES----------*/
+
+
+
+#Landing{
+    color: var(--white-color);
+    background-color: var(--primary-bg-color);
+    height: 50vh;
+    border-radius: 0em 0em 1.5em 1.5em;
+}
+#Landing::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 1; /*higher the z-index, closer it is to you*/
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 1.5em 1.5em;
+}
+#Landing .container-index{
+    position: relative;
+    z-index: 3;
+}
+#Landing .landing-grid{
+    background-image: url(./images/crypto-bgi-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50vh;
+}
+#Landing .landing-grid .landing-address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+}
+#Landing .landing-grid .landing-address h1{
+    font-size: 2.5em;
+    color: var(--yellow-color);
+    padding: 0em;
+    margin-bottom: 1em;
+}
+#Landing .landing-grid .landing-address p{
+    font-size: 1.25em;
+    color: var(--white-color);
+    line-height: 1;
+}
+@media only screen and (max-width:650px){
+    #Landing .landing-grid .landing-address h1{
+        font-size:9vw;
+    }
+    #Landing .landing-grid .landing-address p{
+        font-size:4vw;
+    }
+}
+
+
+
+
+#ShowCase{
+    padding: 3em 0em;
+    color: var(--white-color);
+}
+#ShowCase #Crypto-List{
+    width: 100%;
+}
+#ShowCase #Crypto-List #CryptoCurrency{
+    border: var(--white-color) 1.5px solid;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0em;
+
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 0.5fr;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: auto;
+}
+#ShowCase #Crypto-List #CryptoCurrency div{
+    padding: 0em 0.5em;
+}
+#ShowCase #Crypto-List #CryptoCurrency #Crypto-Name{
+    text-align: left;
+}
+#ShowCase #Crypto-List #CryptoCurrency #Current-Amount{
+    text-align: center;
+}
+#ShowCase #Crypto-List #CryptoCurrency #Checkbox{
+    text-align: right;
+}
+
+#ShowCase #Alerts{
+    border: var(--grey-text-color) 1.25px solid;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1em 0em;
+    margin-top: 3em;
+}
+#ShowCase #Alerts .limits{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+#ShowCase #Alerts .limits .selected-crypto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0em;
+}
+#ShowCase #Alerts .limits .selected-crypto span{
+    padding: 0em 1em;
+}
+#ShowCase #Alerts .limits input{
+    max-width: 120px;
+    background: transparent;
+    color: var(--white-color);
+    outline: none;
+    border: var(--white-color) 1px solid;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 0.25em;
+}
+#ShowCase #Alerts input::placeholder{
+    font-size: 0.75em;
+    text-align: center;
+}
+#ShowCase #Alerts .email-id{
+    width: 50%;
+    background: transparent;
+    color: var(--white-color);
+    outline: none;
+    border: var(--white-color) 1px solid;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 0.25em;
+}
+#ShowCase #Alerts .email-btn{
+    background-color: var(--yellow-color);
+    color: var(--dark-text-color);
+    padding: 0.25em 0.5em;
+    border-radius: 5px;
+}
+
+
+
+footer{
+    color: var(--white-color);
+    text-align: center;
+    font-size: 1.125em;
+    padding: 2em 0em;
+}
+footer p{
+    padding-top: 2em;
+    border-top: var(--grey-text-color) 1px solid;
+}
+
+
+
+/*----------MEDIA QUERY----------*/
+
+
+
+@media(min-width: 500px){
+    
+    #ShowCase #Crypto-List #CryptoCurrency{
+        width: 100%;
+    }
+
+    #ShowCase #Alerts .limits input{
+        max-width: 200px;
+        font-size: 1.125em;
+    }
+    #ShowCase #Alerts input::placeholder{
+        font-size: 1em;
+    }
+
+}

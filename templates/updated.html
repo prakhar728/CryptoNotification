@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block bodyContent %}
+{% for i in currencies %}
+                <div id="CryptoCurrency">
+                    <div>
+                        <span id="Crypto-Name">{{i["Number"]}}. {{i["Name"]}} </span>
+                        <span id="Crypto-Representation">({{i["Symbol"]}})</span>
+                    </div>
+                    <div id="Current-Amount">{{i["Price"]}}</div>
+                    <div><input type="checkbox" name="checkbox" class="checkbox" id="Checkbox"></div>
+                </div> 
+{% endfor %}
+{% endblock %}

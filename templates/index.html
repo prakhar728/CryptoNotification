@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title> </title>
+
+    <!--STYLESHEET--><link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+     <link 
+    <!--FONT AWESOME--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <section id="Landing">
+        <div class="container">
+
+            <div class="landing-grid">
+
+                <div class="landing-address container-index">
+                    <div>
+                        <h1>Crypto Alerts</h1>
+                        <p>Never miss another chance to buy/sell your cryptocurrency on time.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="ShowCase">
+        <div class="container">
+            
+            <div id="Crypto-List">
+                
+              
+                {% block bodyContent %}
+                {% endblock %}
+            </div>
+
+            <!-- <div id="Alerts">
+                <div class="limits">
+                    <div class="selected-crypto">
+                        <span id="Selected-Crypto">2. <span id="Crypto-Name">ETHEREUM</span> (XRC)</span>
+                        <span id="Current-Price">USD 10,000</span>
+                    </div>
+                    <input type="text" name="lower-limit" class="lower-limit" id="Lower-Limit" placeholder="Lower Limit">
+                    <input type="text" name="upper-limit" class="upper-limit" id="Upper-Limit" placeholder="Upper Limit">
+                </div>
+                <div style="padding: 1em 0em">
+                    <input type="email" name="email" id="Email-Id" class="email-id" placeholder="Email Address">
+                    <a href="#" class="email-btn">EMAIL ME</a>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><a href="main.html" style="border-bottom: white 1px solid; padding-bottom: 0.2em">Crypto Alert</a> &copy; 2021. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
