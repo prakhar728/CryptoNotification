@@ -1,18 +1,18 @@
-const express = require('express')
+const express = require('express');
 const Router= express.Router();
-
+const wazirX = require('../externalApi/wazirX.js');
 const model = require('../Models/mognooseModels');
 
 Router.get('/getAssets', async (req,res)=>{
-    const data = await model.find({})
-    .then((data)=>{
-    res.json(data)
-        console.log(' Models Distributed ');
-        console.log(data)
-    })
-    .catch(err=>{
-        console.log(err);
-    })
+
+const assets=['btc','ada','bch','dot','trx','eth','doge','eos','bat','zil'];
+
+const getData = async(assets) =>{
+    const result = await wazirX(assets);
+    res.send(result);
+  }
+  
+  getData(assets);
    
 })
 
